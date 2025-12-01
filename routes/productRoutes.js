@@ -7,18 +7,17 @@ const router = express.Router()
 //create
 router.post('/', createProduct)
 
+// get/retrieve one product by id
+router.get('/:id', getProductById)
+
+//update
+router.put('/:id', updateProduct)
+
 //get all products
 router.get('/', getAllProducts)
 
-// get/retrieve one product by id
-router.get('/', getProductById)
-
-//update
-router.put('/', updateProduct)
-
 //delete 
-router.delete('/', deleteProduct)
-
+router.delete('/:id', deleteProduct)
 
 
 module.exports = router;
